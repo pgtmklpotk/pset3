@@ -14,13 +14,13 @@
 bool search(int value, int values[], int n)
 {
     // TODO: implement a searching algorithm
-    int start,middle,end;
-    start=0;
+    int beg,middle,end;
+    beg=0;
     end=n-1;
     
-    while(start<=end)
+    while(beg<=end)
     {
-        middle=(start+end)/2;
+        middle=(beg+end)/2;
         if(values[middle]==value)
         {
             return true;
@@ -32,7 +32,7 @@ bool search(int value, int values[], int n)
         }
         if(values[middle]<value)
         {
-            start=middle+1;
+            beg=middle+1;
         }
     }
     return false;
