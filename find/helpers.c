@@ -14,7 +14,27 @@
 bool search(int value, int values[], int n)
 {
     // TODO: implement a searching algorithm
+    int start,middle,end;
+    start=0;
+    end=n-1;
     
+    while(start<=end)
+    {
+        middle=(start+end)/2;
+        if(values[middle]==value)
+        {
+            return true;
+            break;
+        }
+        if(values[middle]>value)
+        {
+            end=middle-1;
+        }
+        if(values[middle]<value)
+        {
+            start=middle+1;
+        }
+    }
     return false;
 }
 
@@ -32,7 +52,7 @@ void sort(int values[], int n)
         if(values[j]>values[j+1])
         {   t=values[j];
             values[j]=values[j+1];
-            values[j+1]=;
+            values[j+1]=t;
         }
     }
     
