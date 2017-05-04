@@ -32,7 +32,7 @@ void sort(int values[], int n)
         if(values[j]>values[j+1])
         {   t=values[j];
             values[j]=values[j+1];
-            values[j+1]=t
+            values[j+1]=;
         }
     }
     
