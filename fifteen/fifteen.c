@@ -200,6 +200,26 @@ void draw(void)
 bool move(int tile)
 {
     // TODO
+    int i,j,posx,posy;
+    for(i=0;i<d;i++)
+    {
+        for(j=0;j<d;j++)
+        {
+            if(board[i][j] == tile){
+                posx = i;
+                posy = j;
+            }
+            
+        }
+    }
+    if((abs(spposx-posx)==1 && abs(spposy-posy)==0)||(abs(spposx-posx)==0 && abs(spposy-posy)==1)){
+        board[spposx][spposy] = board[posx][posy];
+        board[posx][posy] = 0;
+        
+        spposx = posx;
+        spposy = posy;
+        return true;
+    }
     return false;
 }
 
