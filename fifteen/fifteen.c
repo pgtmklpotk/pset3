@@ -28,6 +28,7 @@ int board[DIM_MAX][DIM_MAX];
 
 // dimensions
 int d;
+int spposx,spposy;
 
 // prototypes
 void clear(void);
@@ -157,6 +158,19 @@ void greet(void)
 void init(void)
 {
     // TODO
+    spposx = spposy = d-1;
+    int num = d*d-1;
+    
+    for(int i=0;i<d;i++){
+        for(int j=0;j<d;j++){
+            board[i][j] = num--;
+        }
+    }
+    if(d%2==0){
+        board[d-1][d-2] = 2;
+        board[d-1][d-3] = 1;
+    }
+    return;
 }
 
 /**
@@ -165,6 +179,7 @@ void init(void)
 void draw(void)
 {
     // TODO
+    
 }
 
 /**
