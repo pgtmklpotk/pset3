@@ -229,6 +229,16 @@ bool move(int tile)
  */
 bool won(void)
 {
-    // TODO
-    return false;
+    // TODO 
+    int i,j,count = 1;
+    for(i=0;i<d;i++){
+        for(j=0;j<d;j++){
+            if(i == d-1 && j == d-1)
+                continue;
+            if(board[i][j] != count++){
+                return false;
+            }
+        }
+    }
+    return true;
 }
